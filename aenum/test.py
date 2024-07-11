@@ -39,6 +39,10 @@ try:
 except NameError:
     from aenum import any
 
+
+
+tempdir = tempfile.mkdtemp()
+
 MODULE = __name__
 SHORT_MODULE = MODULE.split('.')[-1]
 
@@ -214,6 +218,8 @@ if PY3:
 
 if pyver >= PY3_7:
     from .test_v37 import TestEnumV37
+
+from .test_sep import *
 
 # for subclassing tests
 

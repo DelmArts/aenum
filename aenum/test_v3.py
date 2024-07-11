@@ -27,6 +27,8 @@ except NameError:
     # python3.4
     RecursionError = RuntimeError
 
+tempdir = tempfile.mkdtemp()
+
 class TestEnumV3(TestCase):
 
     def setUp(self):
